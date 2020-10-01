@@ -24,7 +24,7 @@
             <header class="post-card-header">
                 {{#if primary_tag}}
                     {{#primary_tag}}
-                    <div class="post-card-primary-tag">{{name}}</div>
+                    <div class="post-card-primary-tag"><a href="{{url}}">{{name}}</a></div>
                     {{/primary_tag}}
                 {{/if}}
                 <h2 class="post-card-title">{{title}}</h2>
@@ -61,7 +61,7 @@
             </ul>
             <div class="post-card-byline-content">
                 <span>{{#has author="count:>2"}}Multiple authors{{else}}{{authors}}{{/has}}</span>
-                <span class="post-card-byline-date"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
+                <span class="post-card-byline-date"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time minute="Temps de lecture : 1 min" minutes="Temps de lecture :  % minutes"}}</span>
             </div>
         </footer>
 
