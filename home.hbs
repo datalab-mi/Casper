@@ -55,7 +55,8 @@ into the {body} of the default.hbs template --}}
                     {{content}}
                 </div>
             </section>
-
+        
+        <div class="inner posts">
          {{#get "posts" limit="3" include="authors,tags"}}
             <div class="post-feed">
                 {{#foreach posts}}
@@ -63,6 +64,7 @@ into the {body} of the default.hbs template --}}
                 {{/foreach}}
             </div>
         {{/get}}
+        </div>
         </article>
     
     </div>
