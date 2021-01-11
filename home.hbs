@@ -2,22 +2,41 @@
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
 
-<header class="site-home-header">
-    {{> header-background background=@site.cover_image}} {{!--Special header-image.hbs partial to generate the background image--}}
-        <div class="inner">
-            {{> "site-nav"}}
-            <div class="site-header-content">
-                <h1 class="site-title">
-                    {{#if @site.logo}}
-                        <img class="site-logo" src="{{img_url @site.logo size="l"}}" alt="{{@site.title}}" />
-                    {{else}}
-                        {{@site.title}}
-                    {{/if}}
-                </h1>
-                <h2 class="site-description">{{@site.description}}</h2>
+<header class="rf-header">
+  <div class="inner">
+    <div class="rf-container">
+        <div class="rf-header__body">
+            <div class="rf-header__brand">
+                <a class="rf-logo" href="#" title="Ministère de l'intérieur">
+                    <span class="rf-logo__title">Ministère
+                    <br>
+                     de l'intérieur</span>
+                </a>
+            </div>
+            <div class="rf-header__navbar">
+                {{#if @site.logo}}
+                    <a class="site-nav-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
+                {{else}}
+                    <a class="site-nav-logo" href="{{@site.url}}"></a>
+                    <div class="rf-service">
+                    <a class="rf-service__title" href="{{@site.url}}" title="{{@site.title}}">
+                    {{@site.title}}
+                    </a>
+                    <p class="rf-service__tagline">baseline - précisions sur l‘organisation</p>
+                    </div>
+                {{/if}}
+            </div>
+            <div class="site-nav-right">
+                {{#if @site.navigation}}
+                    {{navigation}}
+                {{/if}}
+                {{#if @labs.members}}
+                    <a class="subscribe-button" href="#subscribe">Subscribe</a>
+                {{/if}}
             </div>
         </div>
     </div>
+  </div>
 </header>
 
 
