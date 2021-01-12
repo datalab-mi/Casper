@@ -3102,11 +3102,8 @@ Usage (In Ghost editor):
 
 .head-page {
     position: relative;
-    background: url("../images/image_ouverture.jpg") no-repeat;
     background-size: cover;
     background-position: center;
-    color: #fff;
-
 }
 
 .head-page--wrapper {
