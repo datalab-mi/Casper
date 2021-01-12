@@ -30,8 +30,7 @@ production stylesheet in assets/built/screen.css
 /* 1. Global - Set up the things
 /* ---------------------------------------------------------- */
 @import "global.css";
-@import "@gouvfr/header/dist/css/header.css";
-@import "@gouvfr/logo/dist/css/logo.css";
+@import "@gouvfr/all/dist/css/all.min.css";
 
 body {
     background: #fff;
@@ -3099,4 +3098,40 @@ Usage (In Ghost editor):
     .subscribe-form .success .message-success {
         color: color-mod(var(--green) l(+5%) s(-5%));
     }
+}
+
+.head-page {
+    position: relative;
+    background: url("../images/image_ouverture.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+
+}
+
+.head-page--wrapper {
+    position: relative;
+    height: 100%;
+    padding-top: 8rem;
+}
+.chapo {
+    font-size: 2.4rem;
+    margin-top: 2rem;
+}
+.head-page-bottom {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    bottom: 0;
+    background-color: #000091;
+    padding-left: 3.6rem;
+    padding-right: 3.6rem;
+}
+
+.go-down {
+    display: flex;
+    justify-content: center;
+    width: 6rem;
+    height: 6rem;
+    background-color: #fff;
 }

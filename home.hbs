@@ -39,7 +39,30 @@ into the {body} of the default.hbs template --}}
   </div>
 </header>
 
+<div class="head-page">
+    {{> header-background background=@site.cover_image}} {{!--Special header-image.hbs partial to generate the background image--}}
+    <div class="head-page--wrapper container">
+        <h1>Laboratoire de la donnée</h1>
+        <p class="chapo">Transformez votre métier par la donnée</p>
 
+        <div class="head-page-bottom">
+            <div class="rf-grid-row">
+                <div class="rf-col-xs-12 rf-col-lg-2">
+                    <h2 class="head-page-bottom__title">Le datalab</h2>
+                </div>
+                <div class="rf-col-xs-12 rf-col-lg-9">
+                    <p class="head-page-bottom__content">Depuis juin 2016, le datalab soutient la mise en oeuvre de cas
+                        d'usages de valorisation des données conduits avec les directions métiers.</p>
+                </div>
+                <div class="rf-col-xs-12 rf-col-lg-1">
+                    <a href="#down" class="go-down" title="Bas de page" id="scrollDown">
+                        <img src="/assets/images/fleche_ouverture.svg" alt="" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <main id="site-main" class="site-main outer">   
     {{#page}}
