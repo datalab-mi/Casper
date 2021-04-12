@@ -30,6 +30,7 @@ production stylesheet in assets/built/screen.css
 /* 1. Global - Set up the things
 /* ---------------------------------------------------------- */
 @import "global.css";
+@import "@gouvfr/all/dist/css/all.min.css";
 
 body {
     background: #fff;
@@ -114,7 +115,7 @@ body {
     margin-top: 64px;
     padding-bottom: 12px;
     color: #fff;
-    background: color-mod(var(--darkgrey) l(-5%)) no-repeat center center;
+    background: color-mod(var(--whitegrey) l(-5%)) no-repeat center center;
     background-size: cover;
 }
 
@@ -283,7 +284,7 @@ body {
     right: 0;
     left: 0;
     z-index: 1000;
-    background: color-mod(var(--darkgrey) l(-5%));
+    background: color-mod(var(--whitegrey) l(-5%));
 }
 
 .site-nav {
@@ -316,7 +317,7 @@ body {
 .site-header-background:not(.responsive-header-img) .site-nav-left-wrapper:after,
 .site-nav-main .site-nav-left-wrapper:after {
     right: 0;
-    background: linear-gradient(to right, color-mod(var(--darkgrey) l(-5%) a(0)) 0%,color-mod(var(--darkgrey) l(-5%)) 100%);
+    background: linear-gradient(to right, color-mod(var(--whitegrey) l(-5%) a(0)) 0%,color-mod(var(--whitegrey) l(-5%)) 100%);
 }
 
 .site-nav-left {
@@ -402,7 +403,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     position: relative;
     display: block;
     padding: 12px 12px;
-    color: #fff;
+    color: #000;
     opacity: 0.8;
     transition: opacity 0.35s ease-in-out;
 }
@@ -3097,4 +3098,37 @@ Usage (In Ghost editor):
     .subscribe-form .success .message-success {
         color: color-mod(var(--green) l(+5%) s(-5%));
     }
+}
+
+.head-page {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.head-page--wrapper {
+    position: relative;
+    height: 100%;
+    padding-top: 8rem;
+}
+.chapo {
+    font-size: 2.4rem;
+    margin-top: 2rem;
+}
+.head-page-bottom {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    bottom: 0;
+    background-color: #000091;
+    padding-left: 3.6rem;
+    padding-right: 3.6rem;
+}
+
+.go-down {
+    display: flex;
+    justify-content: center;
+    width: 6rem;
+    height: 6rem;
+    background-color: #fff;
 }
