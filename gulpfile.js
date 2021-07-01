@@ -63,9 +63,11 @@ function js(done) {
         src([
             // pull in lib files first so our own code can depend on it
             'assets/js/lib/*.js',
-            'assets/js/*.js'
+            'assets/js/*.js',
         ], {sourcemaps: true}),
         concat('casper.js'),
+        concat('node_modules/@gouvfr/dsfr/dist/js/dsfr.module.min.js'),
+        concat('node_modules/@gouvfr/dsfr/dist/js/dsfr.nomodule.min.js'),
         uglify(),
         dest('assets/built/', {sourcemaps: '.'}),
         livereload()
