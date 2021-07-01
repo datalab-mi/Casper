@@ -1,0 +1,5 @@
+<ul class="fr-links-group">
+    {{#foreach navigation}}
+    <li><a  class="fr-link{{#if current}} fr-fi-play-line{{/if}}" href="{{url absolute="true"}}">{{label}}</a></li>
+    {{/foreach}}
+</ul>
