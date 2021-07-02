@@ -35,6 +35,15 @@ into the {body} of the default.hbs template --}}
                     </div>
                 </div>
                 <div class="fr-header__tools">
+                        <div class="fr-search-bar" id="header-search" role="search">
+                           <label class="fr-label" for="search-784-input">
+                               Recherche
+                           </label>
+                           <input class="fr-input" placeholder="Rechercher" type="search" id="search-784-input" name="search-784-input">
+                           <button class="fr-btn" title="Rechercher">
+                               Rechercher
+                           </button>
+                        </div>
                     <div class="fr-header__tools-links">
                             {{#if @site.navigation}}
                                 {{navigation}}
@@ -56,6 +65,14 @@ into the {body} of the default.hbs template --}}
         </div>
     </div>
 </header>
+
+
+<form>
+    <input id="search-field" />
+    <input type="submit" value="search">
+</form>
+
+<section id="results"></section>
 
 
 <div class="head-page">
