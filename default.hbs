@@ -86,6 +86,14 @@
     {{!-- Fitvids (for responsive video embeds), infinite scroll, floating header, and gallery card support --}}
     <script src="{{asset "built/casper.js"}}"></script>
 
+    {{!-- ghostHunter --}}
+    <script type="text/javascript" src="{{asset "ghostHunter/dist/jquery.ghosthunter.js"}}"></script>
+    <script>
+      $("#search-field").ghostHunter({
+        results: "#results"
+      });
+    </script>
+
     {{!-- Scripts for Members subscription --}}
     <script>
         // Parse the URL parameter
